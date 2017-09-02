@@ -6,7 +6,9 @@
  Функция должна принимать один аргумент и возвращать его
  */
 function returnFirstArgument(arg) {
+  
     return arg;
+
 }
 
 /*
@@ -16,7 +18,9 @@ function returnFirstArgument(arg) {
  Значение по умолчанию второго аргумента должно быть 100
  */
 function defaultParameterValue(a, b) {
+   
     return (a+(b||100));
+
 }
 
 /*
@@ -26,13 +30,15 @@ function defaultParameterValue(a, b) {
  Количество переданных аргументов заранее неизвестно
  */
 function returnArgumentsArray() {
+    
     var lengthArg= arguments.length,
     arr=[];
-    console.log(arguments);
-    for (let i=0; i<lengthArg; i++){
+    
+    for (let i=0; i<lengthArg; i++) {
+       
         arr[i]=arguments[i];
     }
-    console.log(arr);
+    
     return arr;
 
 }
@@ -43,7 +49,9 @@ function returnArgumentsArray() {
  Функция должна принимать другую функцию и возвращать результат вызова переданной функции
  */
 function returnFnResult(fn) {
-    return fn();}
+    
+    return fn ();
+}
 
 /*
  Задание 5:
@@ -52,21 +60,32 @@ function returnFnResult(fn) {
  При вызове F, переданное число должно быть увеличено на единицу и возвращено из F
  */
 function returnCounter(number) {
-    var x = (number||0);
-    return F(){
-        x++;
-    }
-};
-   
+   function F() {
+       
+    number = (number||0) + 1;
+       
+       return number;
+   }
+
+   return F
+
+}
+
 /*
  Задание 6 *:
 
  Функция должна принимать другую функцию (F) и некоторое количество дополнительных аргументов
  Функция должна привязать переданные аргументы к функции F и вернуть получившуюся функцию
  */
-function bindFunction(fn) {
-}
+function bindFunction (fn) {
+    
+    function F(fn){
+       
+    return F;
 
+}
+    return F;
+}
 export {
     returnFirstArgument,
     defaultParameterValue,
